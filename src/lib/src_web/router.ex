@@ -7,6 +7,8 @@ defmodule SrcWeb.Router do
 
   scope "/api", SrcWeb do
     pipe_through :api
+    post "/user/login", UserController, :login
+    resources "/user", UserController, except: [:new, :edit]
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
