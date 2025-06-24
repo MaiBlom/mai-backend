@@ -10,3 +10,4 @@ src/config/*.secret.exs
 src/.elixir_ls/
 src/tmp/
 src/src-*.tar
+.env.exs
