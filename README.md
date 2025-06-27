@@ -1,4 +1,4 @@
-# mai-black-backend
+# mai-backend
 ## install elixir
 https://elixir-lang.org/install.html
 
