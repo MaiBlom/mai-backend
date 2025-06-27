@@ -36,6 +36,7 @@ defmodule Src.MixProject do
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.10"},
       {:myxql, ">= 0.0.0"},
+      {:cors_plug, "~> 3.0"},
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:swoosh, "~> 1.5"},
       {:finch, "~> 0.13"},

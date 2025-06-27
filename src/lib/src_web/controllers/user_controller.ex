@@ -57,7 +57,7 @@ defmodule SrcWeb.UserController do
     with {:ok} <- Users.login(user, user_params["password"]) do
       send_resp(conn, 202, "Logged in")
     else {:error} ->
-      send_resp(conn, 401, "Incorrect password")
+      send_resp(conn, 401, "Incorrect login credentials")
     end
   end
 end

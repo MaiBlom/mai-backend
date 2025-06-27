@@ -18,8 +18,5 @@ defmodule Src.Users.User do
     user
     |> cast(attrs, [:username, :password, :email, :birthdate, :firstname, :lastname])
     |> validate_required([:username, :password, :birthdate])
-    # |> unique_constraint([:username, :email], name: :users_username_email_index)
-    # |> unique_constraint(:username, name: :users_username_index)
-    # |> unique_constraint(:email, name: :users_email_index)
   end
 end
