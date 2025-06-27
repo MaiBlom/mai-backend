@@ -6,9 +6,6 @@ https://elixir-lang.org/install.html
 https://documentation.ubuntu.com/server/how-to/databases/install-mysql/  
 InnnoDB
 
-First login:
-- `mysqladmin -u root password newpass`
-
 ## phoenix server
 To start your Phoenix server:
 
