@@ -40,7 +40,7 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 if config_env() in [:dev, :test] do
-  import_config "../../.env.exs"
+  import_config "../.env.exs"
 end
 
 # Import environment specific config. This must remain at the bottom

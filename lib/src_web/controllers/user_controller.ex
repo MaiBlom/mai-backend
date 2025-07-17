@@ -60,4 +60,14 @@ defmodule SrcWeb.UserController do
       send_resp(conn, 401, "Incorrect login credentials")
     end
   end
+
+  #def logout(conn, %{"user" => user_params}) do
+  #  user = Users.get_user_with_username(user_params["username"])
+  #
+  #  with {:ok} <- Users.login(user, user_params["password"]) do
+  #    send_resp(conn, 202, "Logged in")
+  #  else {:error} ->
+  #    send_resp(conn, 401, "Incorrect login credentials")
+  #  end
+  #end
 end

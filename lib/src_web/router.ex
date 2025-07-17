@@ -8,6 +8,7 @@ defmodule SrcWeb.Router do
   scope "/api", SrcWeb do
     pipe_through :api
     post "/user/login", UserController, :login
+    #logout "/user/logout", UserController, :logout
     resources "/user", UserController, except: [:new, :edit]
   end
 
