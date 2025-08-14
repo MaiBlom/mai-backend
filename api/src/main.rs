@@ -1,4 +1,4 @@
-use std::env;
+use std::{env};
 use actix_web::{web, App, HttpServer};
 mod controllers {
     pub mod user_controller;
@@ -34,10 +34,8 @@ async fn main() -> std::io::Result<()> {
 
     log::info!("setting up app from environment");
 
-    // api environment variables
     let server_addr = env::var("SERVER_ADDR").expect("SERVER_ADDR is not set");
 
-    // db environment variables
     let db_user = env::var("MYSQL_USER")
         .expect("MYSQL_USER is not set in .env file");
     let db_password = env::var("MYSQL_PASSWORD")
@@ -55,7 +53,7 @@ async fn main() -> std::io::Result<()> {
     let pool = mysql::Pool::new(builder).unwrap();
     let shared_database = web::Data::new(pool);
 
-    HttpServer::new(|| {
+    HttpServer::new(move || {
         App::new()
             .app_data(shared_database.clone())
             .configure(api_routes)
